@@ -1,5 +1,5 @@
 import {student, StudentType} from "../02-lesson-objects/02";
-import {governmentBuildingType, HouseType} from '../02-lesson-objects/02_02'
+import {CityType, governmentBuildingType, HouseType} from '../02-lesson-objects/02_02'
 
 const sum = (a: number, b: number) => {
     return a + b;
@@ -38,3 +38,6 @@ export const toHireStaff = (governmentBuilding: governmentBuildingType, staff: n
     return governmentBuilding.staffCount += staff;
 }
 
+export const createMessage = (city: CityType) => {
+    return `Hello ${city.title} citizens! I want you be happy! All ${city.citizensNumber}`
+}

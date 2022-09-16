@@ -1,5 +1,5 @@
 import {CityType} from "../02-lesson-objects/02_02";
-import {addMoneyToBudget, repairHouse, toFireStaff, toHireStaff} from "./03";
+import {addMoneyToBudget, createMessage, repairHouse, toFireStaff, toHireStaff} from "./03";
 
 let city: CityType;
 
@@ -84,4 +84,10 @@ test('Staff should be increased', () => {
     toHireStaff(city.governmentBuildings[0], 20);
 
     expect(city.governmentBuildings[0].staffCount).toBe(220);
+});
+
+test('Greeting message should be correct for city', () => {
+    const message = createMessage(city);
+
+    expect(message).toBe(`Hello ${city.title} citizens! I want you be happy! All ${city.citizensNumber}`)
 });
