@@ -53,8 +53,8 @@ beforeEach(() => {
 test('House should be destroyed', () => {
     demolishHousesOnTheStreet(city, 'White street');
 
-    expect(city.houses.length).toBe(1);
-    expect(city.houses[0].id).toBe(1);
+    expect(city.houses.length).toBe(2);
+    expect(city.houses[0].id).toBe(2);
 
 })
 
